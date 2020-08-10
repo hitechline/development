@@ -27,9 +27,10 @@
     "yup": "^0.29.3"
   },
   "devDependencies": {
+    "@hitechline/eslint-config-web": "*",
+    "@hitechline/eslint-config-node": "*",
     "@types/react": "^16.9.45",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.5"
+    "@types/react-dom": "^16.9.8",
+    "@types/yup": "^0.29.4"
   }
 }

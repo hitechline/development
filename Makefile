@@ -1,14 +1,14 @@
 lint:
-  eslint ./ --ext js,ts
+  eslint ./ --ext js,ts,tsx
 
 lint-fix:
-  eslint ./ --ext js,ts --fix
+  eslint ./ --ext js,ts,tsx --fix
 
 prettier:
-  prettier --check ./**/*.{js,ts}
+  prettier --check ./**/*.{js,ts,tsx}
 
 prettier-fix:
-  prettier --write ./**/*.{js,ts}
+  prettier --write ./**/*.{js,ts,tsx}
 
 fix:
-  make lint lint-fix prettier prettier-fix
+  make lint-fix prettier-fix
