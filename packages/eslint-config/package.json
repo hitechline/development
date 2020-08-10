@@ -2,7 +2,8 @@
   "name": "@hitechline/eslint-config",
   "version": "1.0.0",
   "license": "AGPL-3.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "javascript": true,
   "repository": {
     "type": "git",
     "directory": "packages/eslint-config",

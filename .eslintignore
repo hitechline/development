@@ -2,4 +2,3 @@ node_modules/
 dist/
 local/
 typings/
-rollup.config.js

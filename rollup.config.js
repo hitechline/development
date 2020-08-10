@@ -9,39 +9,23 @@ import ttypescript from 'ttypescript';
 const PACKAGE_ROOT_PATH = process.cwd();
 const PKG = require(path.join(PACKAGE_ROOT_PATH, 'package.json')); // eslint-disable-line import/no-dynamic-require, @typescript-eslint/no-var-requires
 
-function makeExternalPredicate(externalArr) {
-  if (!externalArr.length) return () => false;
-  return id => new RegExp(`^(${externalArr.join('|')})($|/)`).test(id);
-}
+const PLUGINS = [url(), terser(), resolve(), commonjs()];
+const OUTPUTS = [
+  {
+    format: 'cjs',
+    sourcemap: true,
+    file: path.resolve(PACKAGE_ROOT_PATH, 'dist/index.js'),
+  },
+];
 
-function getExternal() {
-  return makeExternalPredicate(
-    Object.keys(PKG.peerDependencies || {}).concat(
-      Object.keys(PKG.dependencies || {}),
-    ),
-  );
-}
+if (!PKG.javascript) {
+  OUTPUTS.push({
+    format: 'es',
+    sourcemap: true,
+    file: path.resolve(PACKAGE_ROOT_PATH, 'dist/index.es.js'),
+  });
 
-export default {
-  input: path.join(PACKAGE_ROOT_PATH, 'src/index.ts'),
-  external: getExternal(),
-  output: [
-    {
-      format: 'cjs',
-      sourcemap: true,
-      file: path.resolve(PACKAGE_ROOT_PATH, 'dist/index.js'),
-    },
-    {
-      format: 'es',
-      sourcemap: true,
-      file: path.resolve(PACKAGE_ROOT_PATH, 'dist/index.es.js'),
-    },
-  ],
-  plugins: [
-    url(),
-    terser(),
-    resolve(),
-    commonjs(),
+  PLUGINS.push(
     typescript({
       typescript: ttypescript,
       rollupCommonJSResolveHack: true,
@@ -54,5 +38,24 @@ export default {
         },
       },
     }),
-  ],
+  );
+}
+
+function getExternal() {
+  const array = Object.keys(PKG.peerDependencies || {}).concat(
+    Object.keys(PKG.dependencies || {}),
+  );
+
+  if (!array.length) return () => false;
+  return id => new RegExp(`^(${array.join('|')})($|/)`).test(id);
+}
+
+export default {
+  output: OUTPUTS,
+  plugins: PLUGINS,
+  external: getExternal(),
+  input: path.join(
+    PACKAGE_ROOT_PATH,
+    `src/index.${PKG.javascript ? 'js' : 'ts'}`,
+  ),
 };

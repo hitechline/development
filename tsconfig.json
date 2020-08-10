@@ -1,26 +1,21 @@
 {
   "include": ["core/**/*", "packages/**/*"],
   "exclude": [
-    "dist",
-    "typings",
     "__tests__",
     "node_modules",
     "**/*.js",
     "**/*.spec*",
-    "**/*.test*",
+    "**/*.test*"
   ],
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": ".",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
     "strict": true,
     "allowJs": true,
     "sourceMap": true,
-    "composite": true,
     "declaration": true,
-    "skipLibCheck": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "declarationMap": true,
@@ -34,7 +29,7 @@
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["ES6", "DOM", "ES2016", "ES2017"],
+    "lib": ["DOM", "ES6", "ES2016", "ES2020"],
     "paths": {
       "@core/*": ["core/*"],
       "@hitechline/*": ["packages/*/src"]
