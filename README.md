@@ -1,2 +1,2 @@
 # hitechline
- Hitechline infrastructure
+Hitchline open source packages.
