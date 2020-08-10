@@ -1,0 +1,34 @@
+{
+  "exclude": ["node_modules", "dist", "typings"],
+  "compilerOptions": {
+    "baseUrl": "packages",
+    "target": "ES2017",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["ES6"],
+    "paths": {
+      "@hitechline/*": ["*/src"]
+    },
+    "plugins": [
+      {
+        "exclude": ["*"],
+        "transform": "@zerollup/ts-transform-paths"
+      }
+    ]
+  }
+}
