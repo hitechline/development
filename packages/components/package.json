@@ -29,8 +29,8 @@
   "devDependencies": {
     "@hitechline/eslint-config-web": "*",
     "@hitechline/eslint-config-node": "*",
-    "@types/react": "^16.9.45",
-    "@types/react-dom": "^16.9.8",
-    "@types/yup": "^0.29.4"
+    "@types/react": "16.9.46",
+    "@types/react-dom": "16.9.8",
+    "@types/yup": "0.29.4"
   }
 }
