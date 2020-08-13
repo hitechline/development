@@ -4,20 +4,30 @@
   "license": "AGPL-3.0",
   "main": "dist/index.js",
   "javascript": true,
+  "scripts": {
+    "publish": "lerna version --conventional-commits && lerna publish from-package --conventional-commits"
+  },
   "repository": {
     "type": "git",
     "directory": "packages/eslint-config-web",
     "url": "git+https://github.com/hitechline/hitechline.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "web",
     "react",
-    "nodejs",
     "config",
     "eslint"
   ],
   "dependencies": {
-    "@hitechline/eslint-config-node": "*",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
     "eslint-config-airbnb": "^18.2.0",
