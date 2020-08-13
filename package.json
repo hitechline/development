@@ -12,6 +12,10 @@
     "prettier": "make prettier",
     "prettier:fix": "make prettier-fix"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hitechline/hitechline.git"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
@@ -19,10 +23,6 @@
   },
   "engines": {
     "node": ">= 8.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hitechline/hitechline.git"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "14.0.0",
