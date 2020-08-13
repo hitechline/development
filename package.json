@@ -1,11 +1,13 @@
 {
   "name": "hitechline",
+  "version": "1.0.2",
   "license": "AGPL-3.0",
   "private": true,
   "scripts": {
     "prebuild": "yarn clean",
     "build": "lerna exec --parallel -- rollup -c ../../rollup.config.js",
     "clean": "lerna exec --parallel -- rimraf dist typings node_modules/.cache",
+    "publish": "lerna version --conventional-commits && lerna publish from-package --conventional-commits",
     "fix": "make fix",
     "lint": "make lint",
     "lint:fix": "make lint-fix",

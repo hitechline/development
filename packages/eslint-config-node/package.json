@@ -4,9 +4,6 @@
   "license": "AGPL-3.0",
   "main": "dist/index.js",
   "javascript": true,
-  "scripts": {
-    "publish": "lerna version --conventional-commits && lerna publish from-package --conventional-commits"
-  },
   "repository": {
     "type": "git",
     "directory": "packages/eslint-config-node",
