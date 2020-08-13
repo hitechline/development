@@ -4,11 +4,23 @@
   "license": "AGPL-3.0",
   "main": "dist/index.js",
   "javascript": true,
+  "scripts": {
+    "publish": "lerna version --conventional-commits && lerna publish from-package --conventional-commits"
+  },
   "repository": {
     "type": "git",
     "directory": "packages/eslint-config",
     "url": "git+https://github.com/hitechline/hitechline.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "web",
     "react",
