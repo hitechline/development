@@ -32,7 +32,7 @@
     "@rollup/plugin-url": "5.0.1",
     "@types/node": "14.0.27",
     "@zerollup/ts-transform-paths": "1.7.18",
-    "eslint": "7.6.0",
+    "eslint": "7.7.0",
     "lerna": "3.22.1",
     "make": "0.8.1",
     "prettier": "2.0.5",
