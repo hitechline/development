@@ -28,8 +28,8 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaVersion: 2020,
     sourceType: 'module',
+    ecmaVersion: 2020,
     ecmaFeatures: {
       jsx: true,
     },
