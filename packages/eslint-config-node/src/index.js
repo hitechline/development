@@ -18,8 +18,8 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaVersion: 2020,
     sourceType: 'module',
+    ecmaVersion: 2020,
   },
   settings: {
     'import/extensions': ['.js', '.ts'],
