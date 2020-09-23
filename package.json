@@ -23,9 +23,6 @@
       "packages/*"
     ]
   },
-  "engines": {
-    "node": ">= 8.0.0"
-  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "15.1.0",
     "@rollup/plugin-node-resolve": "9.0.0",
