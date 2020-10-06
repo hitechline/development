@@ -36,7 +36,7 @@
   "devDependencies": {
     "@hitechline/eslint-config-web": "*",
     "@hitechline/eslint-config-node": "*",
-    "@types/react": "16.9.49",
+    "@types/react": "16.9.51",
     "@types/react-dom": "16.9.8",
     "@types/yup": "0.29.7"
   }
