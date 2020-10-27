@@ -37,7 +37,7 @@
     "@hitechline/eslint-config-web": "*",
     "@hitechline/eslint-config-node": "*",
     "@types/react": "16.9.53",
-    "@types/react-dom": "16.9.8",
+    "@types/react-dom": "16.9.9",
     "@types/yup": "0.29.8"
   }
 }
