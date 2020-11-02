@@ -1,5 +1,5 @@
 {
-  "include": ["core/**/*", "packages/**/*"],
+  "include": ["packages/**/*"],
   "exclude": [
     "__tests__",
     "node_modules",
@@ -29,9 +29,8 @@
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["DOM", "ES6", "ES2016", "ES2020"],
+    "lib": ["ES6", "ES2016", "ES2020"],
     "paths": {
-      "@core/*": ["core/*"],
       "@hitechline/*": ["packages/*/src"]
     },
     "plugins": [
