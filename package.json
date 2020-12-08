@@ -27,7 +27,7 @@
     "@rollup/plugin-commonjs": "17.0.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "@rollup/plugin-url": "5.0.1",
-    "@types/node": "14.14.10",
+    "@types/node": "14.14.11",
     "@zerollup/ts-transform-paths": "1.7.18",
     "eslint": "7.15.0",
     "lerna": "3.22.1",
