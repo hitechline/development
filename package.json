@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hitechline/hitechline.git"
+    "url": "git+https://github.com/hitechline/development.git"
   },
   "workspaces": {
     "packages": [
