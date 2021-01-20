@@ -23,13 +23,13 @@
       "extends": [
         "@hitechline:base",
         "@hitechline:customize",
-        "@hitechline:lockFileMaintenance",
+        "@hitechline:maintainLockFiles",
         "@hitechline:semanticPrefixFixDepsPeerChoreOthers"
       ],
       "npm": {
         "schedule": "at any time",
         "extends": [
-          "@hitechline:automerge",
+          "@hitechline:simpleAutoMerge",
           "helpers:disableTypesNodeMajor",
           ":autodetectPinVersions",
           ":separatePatchReleases",
@@ -61,19 +61,19 @@
         ":timezone(America/Sao_Paulo)"
       ]
     },
-    "automerge": {
-      "extends": [
-        ":automergePatch",
-        ":automergeMinor"
-      ]
-    },
     "customize": {
       "labels": [
         "renovate",
         "depedendencies"
       ]
     },
-    "lockFileMaintenance": {
+    "simpleAutoMerge": {
+      "extends": [
+        ":automergePatch",
+        ":automergeMinor"
+      ]
+    },
+    "maintainLockFiles": {
       "extends": [
         ":maintainLockFilesWeekly"
       ]
