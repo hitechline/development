@@ -24,7 +24,7 @@
         "@hitechline:base",
         "@hitechline:customize",
         "@hitechline:lockFileMaintenance",
-        "@hitechline:semanticPrefixFixDepsChoreOthers"
+        "@hitechline:semanticPrefixFixDepsPeerChoreOthers"
       ],
       "npm": {
         "schedule": "at any time",
@@ -78,10 +78,7 @@
         ":maintainLockFilesWeekly"
       ]
     },
-    "semanticPrefixFixDepsChoreOthers": {
-      "extends": [
-        ":semanticPrefixFixDepsChoreOthers"
-      ],
+    "semanticPrefixFixDepsPeerChoreOthers": {
       "packageRules": [
         {
           "semanticCommitType": "chore",
