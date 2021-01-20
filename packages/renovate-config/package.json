@@ -1,0 +1,102 @@
+{
+  "name": "@hitechline/renovate-config",
+  "version": "1.0.2",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "directory": "packages/renovate-config",
+    "url": "git+https://github.com/hitechline/development.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "config",
+    "renovate",
+    "shareable"
+  ],
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "@hitechline:base",
+        "@hitechline:customize",
+        "@hitechline:lockFileMaintenance",
+        "@hitechline:semanticPrefixFixDepsChoreOthers"
+      ],
+      "npm": {
+        "schedule": "at any time",
+        "extends": [
+          "@hitechline:automerge",
+          "helpers:disableTypesNodeMajor",
+          ":autodetectPinVersions",
+          ":separatePatchReleases",
+          ":separateMultipleMajorReleases"
+        ],
+        "packageRules": [
+          {
+            "groupName": "ESLint and Prettier",
+            "packageNames": [
+              "eslint",
+              "prettier"
+            ],
+            "packagePatterns": [
+              "^eslint-config-",
+              "^eslint-plugin-"
+            ]
+          }
+        ]
+      }
+    },
+    "base": {
+      "extends": [
+        "group:monorepos",
+        "group:recommended",
+        ":prNotPending",
+        ":prConcurrentLimit5",
+        ":updateNotScheduled",
+        ":ignoreModulesAndTests",
+        ":timezone(America/Sao_Paulo)"
+      ]
+    },
+    "automerge": {
+      "extends": [
+        ":automergePatch",
+        ":automergeMinor"
+      ]
+    },
+    "customize": {
+      "labels": [
+        "renovate",
+        "depedendencies"
+      ]
+    },
+    "lockFileMaintenance": {
+      "extends": [
+        ":maintainLockFilesWeekly"
+      ]
+    },
+    "semanticPrefixFixDepsChoreOthers": {
+      "extends": [
+        ":semanticPrefixFixDepsChoreOthers"
+      ],
+      "packageRules": [
+        {
+          "semanticCommitType": "chore",
+          "packagePatterns": [
+            "*"
+          ]
+        },
+        {
+          "semanticCommitType": "fix",
+          "depTypeList": [
+            "dependencies",
+            "peerDependencies"
+          ]
+        }
+      ]
+    }
+  }
+}
