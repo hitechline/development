@@ -3,7 +3,6 @@
   "version": "1.0.2",
   "license": "AGPL-3.0",
   "main": "dist/index.js",
-  "javascript": true,
   "repository": {
     "type": "git",
     "directory": "packages/eslint-config-node",
