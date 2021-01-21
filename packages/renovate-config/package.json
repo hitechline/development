@@ -51,11 +51,11 @@
       }
     },
     "base": {
+      "prConcurrentLimit": 5,
       "extends": [
         "group:monorepos",
         "group:recommended",
         ":prNotPending",
-        ":prConcurrentLimit5",
         ":updateNotScheduled",
         ":ignoreModulesAndTests",
         ":timezone(America/Sao_Paulo)"
