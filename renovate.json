@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "@hitechline"
-  ]
+  "extends": ["@hitechline"]
 }
