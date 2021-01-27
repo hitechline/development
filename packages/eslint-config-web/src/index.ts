@@ -67,7 +67,7 @@ const eslintConfigWeb = {
       {
         newlinesBetween: 'always',
         alphabetize: { order: 'asc', ignoreCase: true },
-        groups: ['module', '/^@hitechline/', ['parent', 'sibling', 'index']],
+        groups: ['module', ['parent', 'sibling', 'index']],
       },
     ],
   },
