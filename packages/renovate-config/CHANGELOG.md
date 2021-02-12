@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/hitechline/development/compare/v1.1.2...v1.1.3) (2021-02-12)
+
+
+### Bug Fixes
+
+* renovate config ([7a2df51](https://github.com/hitechline/development/commit/7a2df512b36a08d853d41aa7ec633cc69fb72da6))
+
+
+
+
+
 ## [1.1.2](https://github.com/hitechline/development/compare/v1.1.1...v1.1.2) (2021-01-21)
 
 

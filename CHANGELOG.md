@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/hitechline/development/compare/v1.1.2...v1.1.3) (2021-02-12)
+
+
+### Bug Fixes
+
+* add main file ([cfa7482](https://github.com/hitechline/development/commit/cfa7482155a8f5c2326da9e1bf7005d460b9cf0a))
+* remove `[@hitechline](https://github.com/hitechline)` imports ([debdcfe](https://github.com/hitechline/development/commit/debdcfedfa066d94a4d5609963bf149c2268bee9))
+* renovate config ([7a2df51](https://github.com/hitechline/development/commit/7a2df512b36a08d853d41aa7ec633cc69fb72da6))
+
+
+
+
+
 ## [1.1.2](https://github.com/hitechline/development/compare/v1.1.1...v1.1.2) (2021-01-21)
 
 
