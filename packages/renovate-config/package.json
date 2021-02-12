@@ -29,8 +29,8 @@
       "npm": {
         "schedule": "at any time",
         "extends": [
-          "@hitechline:simpleAutoMerge",
           "helpers:disableTypesNodeMajor",
+          "@hitechline:simpleAutoMerge",
           ":autodetectPinVersions",
           ":separatePatchReleases",
           ":separateMultipleMajorReleases"
@@ -55,9 +55,13 @@
       "extends": [
         "group:monorepos",
         "group:recommended",
+        ":pinSkipCi",
         ":prNotPending",
+        ":prHourlyLimitNone",
         ":updateNotScheduled",
         ":ignoreModulesAndTests",
+        ":enableVulnerabilityAlerts",
+        ":automergeRequireAllStatusChecks",
         ":timezone(America/Sao_Paulo)"
       ]
     },
@@ -70,7 +74,10 @@
     "simpleAutoMerge": {
       "extends": [
         ":automergePatch",
-        ":automergeMinor"
+        ":automergeMinor",
+        ":automergeTypes",
+        ":automergeTesters",
+        ":automergeLinters"
       ]
     },
     "maintainLockFiles": {
