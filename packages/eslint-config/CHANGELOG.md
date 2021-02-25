@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/hitechline/development/compare/v1.1.4...v1.2.0) (2021-02-25)
+
+
+### Features
+
+* rework eslint config ([af3628b](https://github.com/hitechline/development/commit/af3628b83adb7982a821cf1722d9f6adccdea689))
+
+
+
+
+
 # 1.1.0 (2021-01-20)
 
 
