@@ -23,17 +23,14 @@
       "extends": [
         "@hitechline:base",
         "@hitechline:customize",
+        "@hitechline:simpleAutoMerge",
         "@hitechline:maintainLockFiles",
         "@hitechline:semanticPrefixFixDepsPeerChoreOthers"
       ],
       "npm": {
         "schedule": "at any time",
         "extends": [
-          "helpers:disableTypesNodeMajor",
-          "@hitechline:simpleAutoMerge",
-          ":autodetectPinVersions",
-          ":separatePatchReleases",
-          ":separateMultipleMajorReleases"
+          "helpers:disableTypesNodeMajor"
         ],
         "packageRules": [
           {
@@ -43,6 +40,8 @@
               "prettier"
             ],
             "packagePatterns": [
+              "eslint-config$",
+              "eslint-plugin$",
               "^eslint-config-",
               "^eslint-plugin-"
             ]
@@ -59,9 +58,11 @@
         ":prNotPending",
         ":prHourlyLimitNone",
         ":updateNotScheduled",
+        ":autodetectPinVersions",
+        ":separatePatchReleases",
         ":ignoreModulesAndTests",
         ":enableVulnerabilityAlerts",
-        ":automergeRequireAllStatusChecks",
+        ":separateMultipleMajorReleases",
         ":timezone(America/Sao_Paulo)"
       ]
     },
@@ -77,7 +78,8 @@
         ":automergeMinor",
         ":automergeTypes",
         ":automergeTesters",
-        ":automergeLinters"
+        ":automergeLinters",
+        ":automergeRequireAllStatusChecks"
       ]
     },
     "maintainLockFiles": {
