@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: '@hitechline/eslint-config-node',
+  extends: '@hitechline/eslint-config',
 };
