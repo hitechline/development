@@ -2,7 +2,7 @@
   "name": "@hitechline/semantic-release-config",
   "version": "1.1.4",
   "license": "AGPL-3.0",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "directory": "packages/semantic-release-config",
@@ -11,20 +11,18 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "config",
-    "semantic-release",
-    "shareable"
+    "shareable",
+    "semantic-release"
   ],
-  "dependencies": {
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/commit-analyzer": "^8.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.2.0",
-    "@semantic-release/npm": "^7.0.10",
-    "@semantic-release/release-notes-generator": "^9.0.1"
+  "peerDependencies": {
+    "@semantic-release/changelog": ">=5.0.1",
+    "@semantic-release/commit-analyzer": ">=8.0.1",
+    "@semantic-release/git": ">=9.0.0",
+    "@semantic-release/github": ">=7.0.5",
+    "@semantic-release/npm": ">=7.0.5",
+    "@semantic-release/release-notes-generator": ">=9.0.1",
+    "semantic-release": ">=16.0.0"
   }
 }

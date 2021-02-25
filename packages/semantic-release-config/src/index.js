@@ -1,6 +1,4 @@
-/* eslint-disable no-template-curly-in-string */
-
-const semanticReleaseConfig = {
+const config = {
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
@@ -38,4 +36,6 @@ const semanticReleaseConfig = {
   ],
 };
 
-export = semanticReleaseConfig;
+module.exports = config;
+
+/* eslint no-template-curly-in-string: 0 */
