@@ -5,11 +5,7 @@
   "private": true,
   "scripts": {
     "fix": "yarn prettier:fix && yarn lint:fix",
-    "clean": "lerna exec --parallel -- rimraf dist node_modules/.cache",
-    "build": "node scripts/build",
-    "prebuild": "yarn clean",
     "release": "lerna version --conventional-commits && lerna publish from-package --conventional-commits",
-    "prerelease": "yarn build",
     "lint": "eslint ./ --ext js,jsx,ts,tsx",
     "lint:fix": "eslint ./ --ext js,jsx,ts,tsx --fix",
     "prettier": "prettier --check ./**/*.{js,jsx,ts,tsx}",
