@@ -3,7 +3,6 @@ const definition = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-shadow': ['error'],
-    '@typescript-eslint/prefer-nullish-coalescing': ['error'],
     '@typescript-eslint/no-empty-interface': [
       'error',
       {
