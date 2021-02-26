@@ -1,28 +1,48 @@
+const allowedExtensions = ['.mjs', '.js', '.jsx'];
+
 const definition = {
   settings: {
-    'import/extensions': ['.mjs', '.js', '.jsx', '.ts', '.tsx'],
+    'import/resolver': {
+      node: {
+        extensions: allowedExtensions,
+      },
+    },
   },
   rules: {
     'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': ['error'],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+        peerDependencies: true,
+        optionalDependencies: false,
+      },
+    ],
     'import/extensions': [
       'error',
       'ignorePackages',
-      {
-        mjs: 'never',
-        js: 'never',
-        ts: 'never',
-      },
+      allowedExtensions.reduce(
+        (obj, extension) =>
+          Object.assign(obj, {
+            [extension.replace(/^\./, '')]: 'never',
+          }),
+        {},
+      ),
     ],
-    'import-helpers/order-imports': [
-      'warn',
+    'import/order': [
+      'error',
       {
-        newlinesBetween: 'always',
-        groups: ['module', ['parent', 'sibling', 'index']],
-        alphabetize: {
+        'newlines-between': 'always',
+        'alphabetize': {
           order: 'asc',
-          ignoreCase: true,
+          caseInsensitive: true,
         },
+        'groups': [
+          'external',
+          ['sibling', 'parent', 'builtin'],
+          'index',
+          'object',
+        ],
       },
     ],
   },

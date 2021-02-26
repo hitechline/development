@@ -1,12 +1,18 @@
 const definition = {
+  plugins: ['react'],
   extends: ['plugin:react/recommended'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-filename-extension': [
-      'warn',
+      'error',
       {
-        extensions: ['js', '.jsx', '.tsx'],
+        extensions: ['.js', '.jsx', '.tsx'],
       },
     ],
   },

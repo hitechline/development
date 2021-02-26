@@ -1,26 +1,29 @@
+const allowedExtensions = ['.mjs', '.js', '.jsx', '.ts', '.tsx'];
+
 const definition = {
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.js', '.ts', '.tsx'],
+      '@typescript-eslint/parser': allowedExtensions.filter(extension =>
+        /^ts/.test(extension),
+      ),
     },
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
       },
     },
-    'import/extensions': ['.mjs', '.js', '.jsx', '.ts', '.tsx'],
   },
   rules: {
     'import/extensions': [
       'error',
       'ignorePackages',
-      {
-        mjs: 'never',
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
+      allowedExtensions.reduce(
+        (obj, extension) =>
+          Object.assign(obj, {
+            [extension.replace(/^\./, '')]: 'never',
+          }),
+        {},
+      ),
     ],
   },
 };

@@ -1,12 +1,24 @@
 const definition = {
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/no-empty-interface': [
       'error',
       {
         allowSingleExtends: true,
+      },
+    ],
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: true,
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
       },
     ],
     '@typescript-eslint/no-use-before-define': [
@@ -18,14 +30,6 @@ const definition = {
       },
     ],
   },
-  overrides: [
-    {
-      files: ['**/*.js'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off',
-      },
-    },
-  ],
 };
 
 module.exports = definition;

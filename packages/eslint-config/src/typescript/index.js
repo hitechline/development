@@ -1,3 +1,4 @@
+const baseSettings = require.resolve('../base');
 const internalSettings = [
   'all',
   'import',
@@ -5,12 +6,18 @@ const internalSettings = [
 ].map(definition => require.resolve(`./definitions/${definition}`));
 
 const config = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
-    ...internalSettings,
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      plugins: ['@typescript-eslint'],
+      parser: '@typescript-eslint/parser',
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/typescript',
+        baseSettings,
+        ...internalSettings,
+      ],
+    },
   ],
 };
 

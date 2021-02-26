@@ -3,13 +3,12 @@ const internalSettings = ['all', 'import'].map(definition =>
 );
 
 const config = {
-  plugins: ['import', 'prettier', 'import-helpers'],
+  plugins: ['import', 'prettier'],
   extends: [
     'airbnb-base',
     'eslint:recommended',
     'plugin:prettier/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
+    'plugin:import/recommended',
     ...internalSettings,
   ],
   globals: {

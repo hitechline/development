@@ -7,6 +7,11 @@ const config = {
   env: {
     browser: true,
   },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
 };
 
 module.exports = config;
