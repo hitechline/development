@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "fix": "yarn prettier:fix && yarn lint:fix",
-    "release": "lerna version --conventional-commits --create-release github && lerna publish from-package --conventional-commits",
+    "release": "lerna version --conventional-commits && lerna publish from-package --conventional-commits",
     "lint": "eslint ./ --ext js,jsx,ts,tsx",
     "lint:fix": "eslint ./ --ext js,jsx,ts,tsx --fix",
     "prettier": "prettier --check ./**/*.{js,jsx,ts,tsx}",
