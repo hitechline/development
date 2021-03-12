@@ -25,45 +25,54 @@
         "@hitechline:customize",
         "@hitechline:simpleAutoMerge",
         "@hitechline:maintainLockFiles",
-        "@hitechline:semanticPrefixFixDepsPeerChoreOthers"
+        "@hitechline:semanticCommitPrefix"
       ],
       "npm": {
-        "schedule": "at any time",
-        "extends": [
-          "helpers:disableTypesNodeMajor"
-        ],
         "packageRules": [
           {
-            "groupName": "ESLint and Prettier",
-            "packageNames": [
-              "eslint",
-              "prettier"
+            "enabled": false,
+            "matchUpdateTypes": [
+              "major"
             ],
-            "packagePatterns": [
-              "eslint-config$",
-              "eslint-plugin$",
-              "^eslint-config-",
-              "^eslint-plugin-"
+            "matchPackageNames": [
+              "@types/node"
             ]
           }
         ]
       }
     },
     "base": {
+      "prCreation": "immediate",
+      "rangeStrategy": "auto",
+      "timezone": "America/Sao_Paulo",
+      "prHourlyLimit": 0,
       "prConcurrentLimit": 5,
+      "ignoreUnstable": true,
+      "updateNotScheduled": true,
+      "separateMajorMinor": true,
+      "separateMinorPatch": false,
+      "pin": {
+        "commitBody": "[skip ci]"
+      },
+      "vulnerabilityAlerts": {
+        "enabled": true,
+        "labels": [
+          "vulnerability"
+        ]
+      },
       "extends": [
         "group:monorepos",
-        "group:recommended",
-        ":pinSkipCi",
-        ":prNotPending",
-        ":prHourlyLimitNone",
-        ":updateNotScheduled",
-        ":autodetectPinVersions",
-        ":separatePatchReleases",
-        ":ignoreModulesAndTests",
-        ":enableVulnerabilityAlerts",
-        ":separateMultipleMajorReleases",
-        ":timezone(America/Sao_Paulo)"
+        "group:recommended"
+      ],
+      "ignorePaths": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**",
+        "**/examples/**",
+        "**/__tests__/**",
+        "**/test/**",
+        "**/tests/**",
+        "**/__fixtures__/**"
       ]
     },
     "customize": {
@@ -73,33 +82,61 @@
       ]
     },
     "simpleAutoMerge": {
-      "extends": [
-        ":automergePatch",
-        ":automergeMinor",
-        ":automergeTypes",
-        ":automergeTesters",
-        ":automergeLinters",
-        ":automergeRequireAllStatusChecks"
+      "requiredStatusChecks": [],
+      "pin": {
+        "automerge": true
+      },
+      "minor": {
+        "automerge": true
+      },
+      "patch": {
+        "automerge": true
+      },
+      "lockFileMaintenance": {
+        "automerge": true
+      },
+      "packageRules": [
+        {
+          "automerge": true,
+          "matchPackagePatterns": [
+            "^@types/"
+          ]
+        },
+        {
+          "automerge": true,
+          "extends": [
+            "packages:test"
+          ]
+        },
+        {
+          "automerge": true,
+          "extends": [
+            "packages:linters"
+          ]
+        }
       ]
     },
     "maintainLockFiles": {
-      "extends": [
-        ":maintainLockFilesWeekly"
-      ]
+      "lockFileMaintenance": {
+        "enabled": true,
+        "extends": [
+          "schedule:weekly"
+        ]
+      }
     },
-    "semanticPrefixFixDepsPeerChoreOthers": {
+    "semanticCommitPrefix": {
       "packageRules": [
         {
           "semanticCommitType": "chore",
-          "packagePatterns": [
+          "matchPackagePatterns": [
             "*"
           ]
         },
         {
           "semanticCommitType": "fix",
-          "depTypeList": [
+          "matchDepTypes": [
             "dependencies",
-            "peerDependencies"
+            "require"
           ]
         }
       ]
