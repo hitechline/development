@@ -1,6 +1,6 @@
-const definition = {
-  plugins: ['react'],
-  extends: ['plugin:react/recommended'],
+const preset = {
+  plugins: ['react', 'react-hooks'],
+  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
   settings: {
     react: {
       version: 'detect',
@@ -18,4 +18,4 @@ const definition = {
   },
 };
 
-module.exports = definition;
+module.exports = preset;

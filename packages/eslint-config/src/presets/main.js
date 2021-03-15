@@ -1,4 +1,5 @@
-const definition = {
+const preset = {
+  extends: ['eslint:recommended'],
   rules: {
     'prettier/prettier': 'error',
 
@@ -13,7 +14,14 @@ const definition = {
         varsIgnorePattern: '^_',
       },
     ],
+    'no-use-before-define': [
+      'error',
+      {
+        variables: false,
+        functions: false,
+      },
+    ],
   },
 };
 
-module.exports = definition;
+module.exports = preset;

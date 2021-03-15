@@ -1,6 +1,8 @@
 const allowedExtensions = ['.mjs', '.js', '.jsx'];
 
-const definition = {
+const preset = {
+  plugins: ['import'],
+  extends: ['plugin:import/recommended'],
   settings: {
     'import/resolver': {
       node: {
@@ -48,4 +50,4 @@ const definition = {
   },
 };
 
-module.exports = definition;
+module.exports = preset;

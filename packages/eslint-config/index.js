@@ -1,3 +1,1 @@
-const config = require('./src/base');
-
-module.exports = config;
+module.exports = require('./src/config/base');
