@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/hitechline/development/compare/@hitechline/eslint-config@1.3.0...@hitechline/eslint-config@2.0.0) (2021-03-15)
+
+
+### Bug Fixes
+
+* remove unused dependency ([d60f391](https://github.com/hitechline/development/commit/d60f3913e31cf9a32645c18015929f25ce8b13e6))
+
+
+### Features
+
+* **eslint-config:**  improve organization ([6911afc](https://github.com/hitechline/development/commit/6911afc9e30768c0c7e2c2daf0a227bd9b6f956a))
+
+
+### BREAKING CHANGES
+
+* **eslint-config:** `eslint-plugin-react-hooks` is Peer Dependencies
+
+
+
+
+
 # 1.3.0 (2021-02-26)
 
 
