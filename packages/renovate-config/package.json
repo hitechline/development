@@ -78,7 +78,7 @@
     "customize": {
       "labels": [
         "renovate",
-        "depedendencies"
+        "dependencies"
       ]
     },
     "simpleAutoMerge": {
