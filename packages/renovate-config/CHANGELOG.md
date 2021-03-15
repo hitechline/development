@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/hitechline/development/compare/@hitechline/renovate-config@1.3.0...@hitechline/renovate-config@1.3.1) (2021-03-15)
+
+
+### Bug Fixes
+
+* **renovate-config:** label name ([938483f](https://github.com/hitechline/development/commit/938483feca826a50c373b7c6305a580c6cf335f1))
+
+
+
+
+
 # 1.3.0 (2021-03-12)
 
 
