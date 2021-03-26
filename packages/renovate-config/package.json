@@ -23,23 +23,14 @@
       "extends": [
         "@hitechline:base",
         "@hitechline:customize",
-        "@hitechline:simpleAutoMerge",
+        "@hitechline:recommendedGroups",
+        "@hitechline:separateReleases",
+        "@hitechline:effectiveAutoMerge",
         "@hitechline:maintainLockFiles",
-        "@hitechline:semanticCommitPrefix"
-      ],
-      "npm": {
-        "packageRules": [
-          {
-            "enabled": false,
-            "matchUpdateTypes": [
-              "major"
-            ],
-            "matchPackageNames": [
-              "@types/node"
-            ]
-          }
-        ]
-      }
+        "@hitechline:semanticCommitPrefix",
+        "@hitechline:ignoreReadOnlyPaths",
+        "@hitechline:ignoreNodeTypesMajor"
+      ]
     },
     "base": {
       "prCreation": "immediate",
@@ -49,39 +40,37 @@
       "prConcurrentLimit": 5,
       "ignoreUnstable": true,
       "updateNotScheduled": true,
-      "separateMajorMinor": true,
-      "separateMinorPatch": false,
       "pin": {
         "commitBody": "[skip ci]"
       },
       "vulnerabilityAlerts": {
-        "enabled": true,
-        "labels": [
-          "vulnerability"
-        ]
-      },
-      "extends": [
-        "group:monorepos",
-        "group:recommended"
-      ],
-      "ignorePaths": [
-        "**/node_modules/**",
-        "**/bower_components/**",
-        "**/vendor/**",
-        "**/examples/**",
-        "**/__tests__/**",
-        "**/test/**",
-        "**/tests/**",
-        "**/__fixtures__/**"
-      ]
+        "enabled": true
+      }
     },
     "customize": {
       "labels": [
         "renovate",
         "dependencies"
+      ],
+      "vulnerabilityAlerts": {
+        "labels": [
+          "security"
+        ]
+      }
+    },
+    "recommendedGroups": {
+      "extends": [
+        "group:monorepos",
+        "group:recommended",
+        "group:definitelyTyped"
       ]
     },
-    "simpleAutoMerge": {
+    "separateReleases": {
+      "separateMinorPatch": true,
+      "separateMajorMinor": true,
+      "separateMultipleMajor": true
+    },
+    "effectiveAutoMerge": {
       "requiredStatusChecks": [],
       "pin": {
         "automerge": true
@@ -137,6 +126,31 @@
           "matchDepTypes": [
             "dependencies",
             "require"
+          ]
+        }
+      ]
+    },
+    "ignoreReadOnlyPaths": {
+      "ignorePaths": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**",
+        "**/examples/**",
+        "**/__tests__/**",
+        "**/test/**",
+        "**/tests/**",
+        "**/__fixtures__/**"
+      ]
+    },
+    "ignoreNodeTypesMajor": {
+      "packageRules": [
+        {
+          "enabled": false,
+          "matchUpdateTypes": [
+            "major"
+          ],
+          "matchPackageNames": [
+            "@types/node"
           ]
         }
       ]
