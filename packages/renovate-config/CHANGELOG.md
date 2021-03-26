@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/hitechline/development/compare/@hitechline/renovate-config@1.3.1...@hitechline/renovate-config@1.4.0) (2021-03-26)
+
+
+### Features
+
+* **renovate-config:** create new presets ([b886722](https://github.com/hitechline/development/commit/b8867227456f5f8546bfd06373a302a0d6550e00))
+
+
+
+
+
 ## [1.3.1](https://github.com/hitechline/development/compare/@hitechline/renovate-config@1.3.0...@hitechline/renovate-config@1.3.1) (2021-03-15)
 
 
