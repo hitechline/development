@@ -89,19 +89,14 @@
       "packageRules": [
         {
           "automerge": true,
-          "matchPackagePatterns": [
-            "^@types/"
+          "matchPackagePrefixes": [
+            "@types/"
           ]
         },
         {
           "automerge": true,
           "extends": [
-            "packages:test"
-          ]
-        },
-        {
-          "automerge": true,
-          "extends": [
+            "packages:test",
             "packages:linters"
           ]
         }
