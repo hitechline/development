@@ -24,7 +24,7 @@
         "@hitechline:base",
         "@hitechline:customize",
         "@hitechline:recommendedGroups",
-        "@hitechline:separateReleases",
+        "@hitechline:separateUpdateTypes",
         "@hitechline:effectiveAutoMerge",
         "@hitechline:maintainLockFiles",
         "@hitechline:semanticCommitPrefix",
@@ -65,7 +65,7 @@
         "group:definitelyTyped"
       ]
     },
-    "separateReleases": {
+    "separateUpdateTypes": {
       "separateMinorPatch": true,
       "separateMajorMinor": true,
       "separateMultipleMajor": true
