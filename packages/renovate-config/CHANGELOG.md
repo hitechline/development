@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/hitechline/development/compare/@hitechline/renovate-config@1.4.0...@hitechline/renovate-config@2.0.0) (2021-04-19)
+
+
+### chore
+
+* rename preset `ignoreNodeTypesMajor` to `ignoreNodeMajorUpdates` ([b1bb5a0](https://github.com/hitechline/development/commit/b1bb5a0b16ad5ad7b5904bffc0233740097ea8bd))
+* **renovate-config:** rename preset `separateReleases` to `separateUpdateTypes` ([89aa887](https://github.com/hitechline/development/commit/89aa8875a8ec95ef311eebe0b448421bee79fd51))
+
+
+### Features
+
+* add new groups in `recommendedGroups` preset ([25a8c6c](https://github.com/hitechline/development/commit/25a8c6cf63894abd3ffb665aa649f5dfac70c437))
+* create `normalizeCommitsType` preset ([7a6aabd](https://github.com/hitechline/development/commit/7a6aabd6e90044059a0fd952939b01c58559826f))
+
+
+### BREAKING CHANGES
+
+* `ignoreNodeTypesMajor` preset is not available
+* `semanticCommitPrefix` preset is removed
+* **renovate-config:** the preset `separateReleases` is not available
+
+
+
+
+
 # [1.4.0](https://github.com/hitechline/development/compare/@hitechline/renovate-config@1.3.1...@hitechline/renovate-config@1.4.0) (2021-03-26)
 
 
