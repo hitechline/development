@@ -27,7 +27,7 @@
         "@hitechline:separateUpdateTypes",
         "@hitechline:effectiveAutoMerge",
         "@hitechline:maintainLockFiles",
-        "@hitechline:semanticCommitPrefix",
+        "@hitechline:normalizeCommitsType",
         "@hitechline:ignoreReadOnlyPaths",
         "@hitechline:ignoreNodeTypesMajor"
       ]
@@ -110,22 +110,10 @@
         ]
       }
     },
-    "semanticCommitPrefix": {
-      "packageRules": [
-        {
-          "semanticCommitType": "chore",
-          "matchPackagePatterns": [
-            "*"
-          ]
-        },
-        {
-          "semanticCommitType": "fix",
-          "matchDepTypes": [
-            "dependencies",
-            "require"
-          ]
-        }
-      ]
+    "normalizeCommitsType": {
+      "semanticCommits": false,
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps"
     },
     "ignoreReadOnlyPaths": {
       "ignorePaths": [
