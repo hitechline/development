@@ -29,7 +29,7 @@
         "@hitechline:maintainLockFiles",
         "@hitechline:normalizeCommitsType",
         "@hitechline:ignoreReadOnlyPaths",
-        "@hitechline:ignoreNodeTypesMajor"
+        "@hitechline:ignoreNodeMajorUpdates"
       ]
     },
     "base": {
@@ -127,7 +127,7 @@
         "**/__fixtures__/**"
       ]
     },
-    "ignoreNodeTypesMajor": {
+    "ignoreNodeMajorUpdates": {
       "packageRules": [
         {
           "enabled": false,
