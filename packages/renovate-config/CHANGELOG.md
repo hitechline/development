@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/hitechline/development/compare/@hitechline/renovate-config@2.0.0...@hitechline/renovate-config@2.0.1) (2021-04-19)
+
+
+### Bug Fixes
+
+* enable semantic commits ([a2a887d](https://github.com/hitechline/development/commit/a2a887d0e334e1167de7e2b18e733143721744f7))
+
+
+
+
+
 # [2.0.0](https://github.com/hitechline/development/compare/@hitechline/renovate-config@1.4.0...@hitechline/renovate-config@2.0.0) (2021-04-19)
 
 
