@@ -60,8 +60,10 @@
     },
     "recommendedGroups": {
       "extends": [
-        "group:monorepos",
         "group:recommended",
+        "group:monorepos",
+        "group:test",
+        "group:linters",
         "group:definitelyTyped"
       ]
     },
