@@ -9,7 +9,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### chore
 
 * rename preset `ignoreNodeTypesMajor` to `ignoreNodeMajorUpdates` ([b1bb5a0](https://github.com/hitechline/development/commit/b1bb5a0b16ad5ad7b5904bffc0233740097ea8bd))
-* **renovate-config:** rename preset `separateReleases` to `separateUpdateTypes` ([89aa887](https://github.com/hitechline/development/commit/89aa8875a8ec95ef311eebe0b448421bee79fd51))
+* rename preset `separateReleases` to `separateUpdateTypes` ([89aa887](https://github.com/hitechline/development/commit/89aa8875a8ec95ef311eebe0b448421bee79fd51))
 
 
 ### Features
@@ -20,9 +20,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### BREAKING CHANGES
 
-* `ignoreNodeTypesMajor` preset is not available
 * `semanticCommitPrefix` preset is removed
-* **renovate-config:** the preset `separateReleases` is not available
+* `separateReleases` preset is not available
+* `ignoreNodeTypesMajor` preset is not available
 
 
 
