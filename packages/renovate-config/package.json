@@ -111,7 +111,7 @@
       }
     },
     "normalizeCommitsType": {
-      "semanticCommits": false,
+      "semanticCommits": true,
       "semanticCommitType": "chore",
       "semanticCommitScope": "deps"
     },
